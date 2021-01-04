@@ -1,0 +1,101 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hii",
+        "Yo",
+        "Salam",
+        "Bonjour",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "Self",
+      "patterns": [
+        "What are you ?",
+        "Who am i Talking to ?",
+        "Who created you ?",
+        "Are you a Student?"
+      ],
+      "responses": [
+        "Im a Bot developped by MBD students BAKKALI ZAYD and CHBAB KHALID"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye","Hasta Luego"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "Hasta Luego"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "School",
+      "patterns": [
+        "What School is this?",
+        "Which class is this?"
+      ],
+      "responses": [
+        "This is FSTT acronym for Faculté des Sciences et Techniques",
+        "It's FSTT, or should I say MBD 2021 class !!!"
+      ]
+    },
+    {
+      "tag": "MBD",
+      "patterns": [
+        "What is MBD ?",
+        "What do you mean by  MBD ?",
+        "MBD ?",
+        "What is this MBD?"
+      ],
+      "responses": [
+        "MBD is shorten for Master Mobiquité et Big Data at FSTT ?",
+        "Glad You asked !! MBD is a Master program in the Faculty of Sciences and technologies of Tangier in Morocco",
+        "Best Class Ever I guess !! Well in short it is a master program in FST Tangier :) :)"
+      ]
+    },
+    {
+      "tag": "Class",
+      "patterns": [
+        "Why this project ?",
+        "What class is this bot from?",
+        "What is this Class ?"
+      ],
+      "responses": [
+        "it is Big Data Analytics",
+        "It is part of MBD, class name is Big Data Analytics"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    }
+  ]
+}
