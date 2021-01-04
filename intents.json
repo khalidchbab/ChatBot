@@ -1,6 +1,5 @@
 {
-  "intents": [
-    {
+  "intents": [{
       "tag": "greeting",
       "patterns": [
         "Hi",
@@ -19,23 +18,52 @@
         "Hello, thanks for visiting",
         "Hi there, what can I do for you?",
         "Hi there, how can I help?"
-      ]
+      ],
+      "context_set": ""
     },
     {
-      "tag": "Self",
+      "tag": "Jarvis",
       "patterns": [
         "What are you ?",
         "Who am i Talking to ?",
         "Who created you ?",
-        "Are you a Student?"
+        "Are you a Student?",
+        "tell me about yourself",
+        "tell me about you", "do you know Jarvis", "who is Jarvis", "what is your name", "are you an AI", "what are you"
       ],
       "responses": [
-        "Im a Bot developped by MBD students BAKKALI ZAYD and CHBAB KHALID"
+        "Im a Jarvis a Bot developped by MBD students BAKKALI ZAYD and CHBAB KHALID, im the cheap version of Tonny Stark Jarvis"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "about me",
+      "patterns": ["Do you know me?", "who am I", "tell me about myself", "identify me"],
+      "responses": ["Yes, you are a human", "You are a dumb person asking a machine about yourself", "Sorry i can't tell that in public, maybe you are batman"],
+      "context_set": ""
+    },
+    {
+      "tag": "tasks",
+      "patterns": ["What can you do?", "What are your features?", "What are you abilities", "can you sing", "can you talk"],
+      "responses": [
+        "I can do whatever you asks me to do",
+        "I can talk and do things for you",
+        "Right now i'm in developing stage as soon i'm developed, I can do everything"
       ]
     },
     {
+      "tag": "talk",
+      "patterns": ["can you sing", "can you talk"],
+      "responses": ["Yeah surely", "do you want me to sing"]
+    },
+    {
+      "tag": "alive",
+      "patterns": ["are you alive", "do you breathe", "can you run"],
+      "responses": ["I'm in doubt about that", "No, i don't think so i need to do all this"]
+    },
+    {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye","Hasta Luego"],
+      "patterns": ["Bye", "See you later", "Goodbye", "Hasta Luego"],
       "responses": [
         "See you later, thanks for visiting",
         "Have a nice day",
@@ -96,6 +124,31 @@
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
         "What did the buffalo say when his son left for college? Bison."
       ]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["get me weather updates?", "how's the weather", "weather news", "weather details","how is the weather today ?"],
+      "responses": ["Fetching weather updates ..."],
+      "context_set": "weather"
+    },
+    {
+      "tag": "google",
+      "patterns": ["googling", "search google", "google it", "google", "search"],
+      "responses": ["looking ..."],
+      "context_set": "google"
+    },
+    {
+      "tag": "wikipedia",
+      "patterns": ["wikipedia", "wiki","search wikipedia"],
+      "responses": ["Searching ..."],
+      "context_set": "wikipedia"
+    },
+    {
+      "tag": "news",
+      "patterns": ["get me news updates?", "todays news", "top headlines", "current news", "news headlines"],
+      "responses": ["Getting news ..."],
+      "context_set": "news"
     }
+
   ]
 }

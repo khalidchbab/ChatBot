@@ -1,6 +1,12 @@
 import random
 import json
-
+from lxml import html
+import requests
+from newsapi import NewsApiClient
+import wikipedia
+import pyowm
+import webbrowser
+from google_speech import Speech
 import torch
 
 from model import NeuralNet
@@ -25,11 +31,39 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Sam"
+bot_name = "Jarvis"
 print("Let's chat! (type 'quit' to exit)")
+
+
+def actions(ques,q):
+    print(q)
+    if 'wiki' in ques['tag']:
+        z=q
+        print(wikipedia.summary(str(z.split(' ',1)[1]),sentences=2))
+
+    if'news' in ques:
+        print('TOP NEWS : ')
+        newsapi = NewsApiClient(api_key='439908f4580845f696e6a19fa868cfd5')
+        top_headlines = newsapi.get_top_headlines(language='en')
+
+        print(top_headlines)
+
+    if 'google' in ques['tag']:
+        new=2
+        tabUrl="http://google.com/?#q="
+        webbrowser.open(tabUrl+q,new=new)
+
+    if 'weather' in ques['tag']:
+        owm=pyowm.OWM('59927012dd656297a866fe1dc096294b')
+        mgr = owm.weather_manager()
+        observation=mgr.one_call(lat=35.7595,lon=-5.8340).forecast_daily[0].temperature('celsius').get('feels_like_morn', None)
+        print(f"{bot_name}: {observation} C")
+lang = "en"
+
 while True:
-    # sentence = "do you use credit cards?"
+    # sentence = "What is MBD ?"
     sentence = input("You: ")
+    q = sentence
     if sentence == "quit":
         break
 
@@ -48,6 +82,13 @@ while True:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                if 'context_set' in intent:
+                    actions(intent,q)
+                val = random.choice(intent['responses'])
+                print(f"{bot_name}: {val}")
+                #speech = Speech(val, lang)
+                #sox_effects = ("speed", "1.0")
+                #speech.play(sox_effects)
+
     else:
         print(f"{bot_name}: I do not understand...")
