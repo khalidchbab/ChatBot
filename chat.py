@@ -36,7 +36,6 @@ print("Let's chat! (type 'quit' to exit)")
 
 
 def actions(ques,q):
-    print(q)
     if 'wiki' in ques['tag']:
         z=q
         print(wikipedia.summary(str(z.split(' ',1)[1]),sentences=2))
@@ -82,13 +81,13 @@ while True:
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                if 'context_set' in intent:
-                    actions(intent,q)
                 val = random.choice(intent['responses'])
                 print(f"{bot_name}: {val}")
                 #speech = Speech(val, lang)
                 #sox_effects = ("speed", "1.0")
                 #speech.play(sox_effects)
+                if 'context_set' in intent:
+                    actions(intent,q)
 
     else:
         print(f"{bot_name}: I do not understand...")

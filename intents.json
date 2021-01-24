@@ -46,20 +46,54 @@
       "tag": "tasks",
       "patterns": ["What can you do?", "What are your features?", "What are you abilities", "can you sing", "can you talk"],
       "responses": [
-        "I can do whatever you asks me to do",
-        "I can talk and do things for you",
-        "Right now i'm in developing stage as soon i'm developed, I can do everything"
+        "I can help you get a diagnosis",
+        "Right now i'm in developing stage so I can't respond on every healthcare problem as soon i'm developed, I can do everything"
       ]
     },
     {
-      "tag": "talk",
-      "patterns": ["can you sing", "can you talk"],
-      "responses": ["Yeah surely", "do you want me to sing"]
+      "tag": "cold",
+      "patterns": [
+        "My nose is choked",
+        "My nose is itching"
+      ],
+      "responses": [
+        "Okay, this is a symptom of cold, You should take a sudafed tablet after your meal"
+        ]
     },
     {
-      "tag": "alive",
-      "patterns": ["are you alive", "do you breathe", "can you run"],
-      "responses": ["I'm in doubt about that", "No, i don't think so i need to do all this"]
+      "tag": "headache",
+      "patterns": [
+        "i have a headache",
+        "i have a migrane headache",
+        "i have a cluster headache",
+        "i have a tension headache",
+        "my haid hurts",
+        "pain in the head"
+      ],
+      "responses": [
+        "symptom noted. Migraines tend to be recurrent, and each attack may last up to 3 days ?",
+        "symptom noted. Attacks tend to occur in daily clusters that can persist for weeks or months. They typically take place at the same time of day, which can often be a couple of hours after falling asleep at night.",
+        "symptom noted. The cause of tension headaches is unclear, but stress, anxiety, and depression are common triggers."
+        ]
+    },
+    {
+      "tag": "fever",
+      "patterns": [
+        "My body temperature has raised",
+        "I am shivering",
+        "I feel hot",
+        "I am feeling weak",
+        "I have weakness in my body"
+      ],
+      "responses": [
+        "This is a symptom of fever, you should take a tablet of Dolipran after you have your meal",
+        "This can be a symptom of Fever"
+        ]
+    },
+    {
+      "tag": "cough",
+      "patterns": ["My chest is aching", "I have a cough", "My throat is itching"],
+      "responses": ["Okay, this is a symptom of cough", "You should take a spoon full of benadryl after your meal"]
     },
     {
       "tag": "goodbye",
@@ -148,6 +182,16 @@
       "patterns": ["get me news updates?", "todays news", "top headlines", "current news", "news headlines"],
       "responses": ["Getting news ..."],
       "context_set": "news"
+    },
+    {
+      "tag": "sick",
+      "patterns": ["i feel sick", "i am sick", "i am not feeling well", "i do not feeling well", "i am not well"],
+      "responses": ["okay. can you tell me what's wrong? what are your symptoms?"]
+    },
+    {
+      "tag": "fine",
+      "patterns": ["i feel fine", "i am feeling fine", "i feel great", "i am feeling great", "i am great","i feel awesome"],
+      "responses": ["great to know. how can i assist you then?"]
     }
 
   ]
