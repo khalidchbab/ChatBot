@@ -90,4 +90,4 @@ while True:
                     actions(intent,q)
 
     else:
-        print(f"{bot_name}: I do not understand...")
+        print(f"{bot_name}: Right now i'm in developing stage so I can't respond on every healthcare problem as soon i'm developed, I can do everything...")

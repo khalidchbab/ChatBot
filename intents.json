@@ -173,7 +173,7 @@
     },
     {
       "tag": "wikipedia",
-      "patterns": ["wikipedia", "wiki","search wikipedia"],
+      "patterns": ["wikipedia", "wiki","search wikipedia","I wanna know more about"],
       "responses": ["Searching ..."],
       "context_set": "wikipedia"
     },
